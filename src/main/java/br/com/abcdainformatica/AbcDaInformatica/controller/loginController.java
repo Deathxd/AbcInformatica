@@ -36,5 +36,9 @@ public class loginController {
         HttpStatus httpStatus = httpServletRequest.getCookies() != null ? HttpStatus.OK : HttpStatus.FORBIDDEN;
         return new ResponseEntity(httpStatus);
     }
+    @RequestMapping(value = "/testar", method = RequestMethod.GET)
+    public String validarLogin(){
+        return "deu certo";
+    }
 }
 
